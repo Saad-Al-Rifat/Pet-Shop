@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Lato", serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid #adabab;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    column-gap: 25px;
+    color: #333030;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+nav ul li:hover {
+    color: #756d6d;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #131313;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.fa-user {
+    color: #000000;
+    padding: 20px;
+    border: 1px solid #776e6e;
+    border-radius: 50%;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.fa-user:hover {
+    background-color: rgb(233, 228, 228);
+}
+
+.button-style {
+    padding: 12px;
+    color: white;
+    background-color: #0E7A81;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.button-style:hover {
+    background-color: #1e8188;
+    scale: 0.98;
+}
+
+.button-style:active {
+    scale: 0.94;
+}
+
+main .static-section {
+    text-align: center;
+
+}
+
+.static-section > div {
+    width: 100%; 
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 5px;
+}
+
+.static-section img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%;
+}
+
+#category-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#category-button button{
+    font-size: 1rem;
+    border: 1px solid #20ABD1;
+    border-radius: 8px;
+    padding: 3px 25px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: white;
+    font-weight: bold;
+    transition: all 250ms;
+    cursor: pointer;
+}
+#category-button button:hover{
+    background-color: #bcd7df;
+}
+#category-button button img{
+    width: 40px;
+    height: 40px;
+}
+.all-like-image-section{
+    border-radius: 10px;
+    border: 1px solid #0E7A81;
+    padding: 10px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cards-div{
+    padding: 10px;
+    border: 1px solid rgb(180, 175, 175);
+    border-radius: 10px;
+    margin: 10px;
+    height: 432px;
+    width: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards-div p{
+    margin-bottom: 5px;
+    color: #555252;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.cards-div img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.card-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    
+}
+.card-button button{
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid #adb1b3;
+    background-color: white;
+    font-size: 1rem;
+    color: #20ABD1;
+    transition: all 250ms;
+    cursor: pointer;
+}
+.card-button button:hover{
+    background-color: #bfeaf5;
+}
+.active-route{
+    background-color: #0E7A81 !important;
+    border-radius: 40px !important;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
