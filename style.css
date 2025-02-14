@@ -131,11 +131,6 @@ main .static-section {
     width: 40px;
     height: 40px;
 }
-.all-like-image-section{
-    border-radius: 10px;
-    border: 1px solid #0E7A81;
-    padding: 10px;
-}
 .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -193,4 +188,23 @@ main .static-section {
     align-items: center;
     height: 100%;
     width: 100%;
+}
+aside{
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 5px !important;
+    border: 1px solid #0E7A81;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 500px;
+    max-width: 400px;
+    overflow-y: scroll;
+}
+aside img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
 }

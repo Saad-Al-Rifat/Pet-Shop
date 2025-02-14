@@ -34,12 +34,24 @@ async function renderCards(){
                 <p><i class="fa-solid fa-dollar-sign"></i>Price: $${datum.price ? datum.price : 'NO Info Available'}</p>
             </div>
             <div class="card-button">
-                <button><i class="fa-solid fa-thumbs-up"></i></button>
+                <button class="click-to-like-this-image"><i class="fa-solid fa-thumbs-up"></i></button>
                 <button>Adopt</button>
                 <button>Details</button>
             </div>
         </div>
         `
+    })
+    const allBtn = document.querySelectorAll('.click-to-like-this-image');
+    allBtn.forEach((el)=>{
+        el.addEventListener('click', (e)=>{
+            const cardDiv = e.target.closest('.cards-div');
+            const imgSource = cardDiv.querySelector('img').src;
+            let imgContainer = document.getElementById("aside");
+            imgContainer.innerHTML +=
+            `
+            <img src="${imgSource}">
+            `
+        })
     })
 }
 renderCards();
@@ -79,26 +91,34 @@ async function fetchByCategory(categoryName){
                 <p><i class="fa-solid fa-dollar-sign"></i>Price: $${datum.price ? datum.price : 'NO Info Available'}</p>
             </div>
             <div class="card-button">
-                <button><i class="fa-solid fa-thumbs-up"></i></button>
+                <button class="like-btn click-to-like-this-image"><i class="fa-solid fa-thumbs-up"></i></button>
                 <button>Adopt</button>
                 <button>Details</button>
             </div>
         </div>
         `
     })
-    // if(data.lenght === 0){
-    //     cardsContainer.classList.remove('grid');
-    //     cardsContainer.innerHTML = 
-    //     `
-    //     <img src="assets\error.webp">
-    //     `
-    // }
+    const allBtn = document.querySelectorAll('.click-to-like-this-image');
+    allBtn.forEach((el)=>{
+        el.addEventListener('click', (e)=>{
+            const cardDiv = e.target.closest('.cards-div');
+            const imgSource = cardDiv.querySelector('img').src;
+            let imgContainer = document.getElementById("aside");
+            imgContainer.innerHTML +=
+            `
+            <img src="${imgSource}">
+            `
+        })
+    })
     if(data.length === 0){
         cardsContainer.classList.remove('grid')
         cardsContainer.classList.add('center')
         cardsContainer.innerHTML =
         `
-       <img src="assets/error.webp" alt="Man With big black Gun" width="400">
+       <img src="assets/error.webp" alt="Man With big black Gun" width="300">
         `
     }
 }
+
+
+
